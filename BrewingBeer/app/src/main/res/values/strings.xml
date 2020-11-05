@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">Brewing Beer</string>
+
+    <string name="grain_name">Grain Name</string>
+    <string name="grain_weight">Pounds</string>
+    <string name="grain_pps">PPS</string>
+
+    <string name="grain_name2">Type of Grain</string>
+    <string name="grain_weight2">Grain Weight</string>
+    <string name="grain_pps2">Grain PPS</string>
+
+    <string name="add_grain_btn">Add Grain</string>
+    <string name="compute_sg_btn">Compute SG</string>
+    <string name="clear_all_btn">CLEAR ALL</string>
+    <string name="submit_new_grain_item_btn">Submit New Grain Item</string>
+
+</resources>

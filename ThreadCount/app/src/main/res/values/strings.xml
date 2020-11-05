@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Thread Count</string>
+
+    <string name="zero">0</string>
+    <string name="start_btn">Start Thread</string>
+    <string name="stop_btn">Stop Thread</string>
+
+</resources>

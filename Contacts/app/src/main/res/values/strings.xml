@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Contacts</string>
+    <string name="friends_list">Friends List</string>
+    <string name="family_list">Family List</string>
+    <string name="professional_list">Professional List</string>
+    <string name="aquaintances_list">Acquaintances List</string>
+
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    tools:context="com.sheltortoiseusa.levic_curve.MyActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/up_btn"
+        android:id="@+id/button1"
+        android:onClick="stepUp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/start_level"
+        android:id="@+id/textView1"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/down_btn"
+        android:id="@+id/button2"
+        android:onClick="stepDown"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/draw_btn"
+        android:id="@+id/button3"
+        android:onClick="drawFractal"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
