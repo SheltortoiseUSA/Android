@@ -241,3 +241,14 @@ ThreadsDemo/app/src/test/
 ThreadsDemo/gradle/wrapper/
 TimeStamper/app/src/androidTest/
 TimeStamper/app/src/test/
+ComposeBasics/.gitignore
+ComposeBasics/build.gradle
+ComposeBasics/gradle.properties
+ComposeBasics/gradlew
+ComposeBasics/gradlew.bat
+ComposeBasics/.idea/
+ComposeBasics/app/.gitignore
+ComposeBasics/app/proguard-rules.pro
+ComposeBasics/app/src/androidTest/
+ComposeBasics/app/src/test/
+ComposeBasics/gradle/wrapper/
