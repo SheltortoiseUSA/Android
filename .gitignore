@@ -252,3 +252,13 @@ ComposeBasics/app/proguard-rules.pro
 ComposeBasics/app/src/androidTest/
 ComposeBasics/app/src/test/
 ComposeBasics/gradle/wrapper/
+FO4Economizer/.gitignore
+FO4Economizer/gradle.properties
+FO4Economizer/gradlew
+FO4Economizer/gradlew.bat
+FO4Economizer/.idea/
+FO4Economizer/app/src/test/
+FO4Economizer/gradle/wrapper/
+FO4Economizer/app/src/androidTest/
+FO4Economizer/app/.gitignore
+FO4Economizer/app/proguard-rules.pro
