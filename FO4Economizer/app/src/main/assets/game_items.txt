@@ -44,8 +44,3 @@
 {"Name","Yeast";                       "Weight","0.1";      "Value","4500.0";}
 
 {"Name","Acid_Bomb";                "Difficulty","5";       "Craft_List","[acid=20]-[circuitry=1]";}
-{"Name","Acid_Bomb";                "Difficulty","5";       "Craft_List","[acid=20]-[circuitry=1]";}
-{"Name","Acid_Bomb";                "Difficulty","5";       "Craft_List","[acid=20]-[circuitry=1]";}
-{"Name","Acid_Bomb";                "Difficulty","5";       "Craft_List","[acid=20]-[circuitry=1]";}
-{"Name","Acid_Bomb";                "Difficulty","5";       "Craft_List","[acid=20]-[circuitry=1]";}
-{"Name","Acid_Bomb";                "Difficulty","5";       "Craft_List","[acid=20]-[circuitry=1]";}
