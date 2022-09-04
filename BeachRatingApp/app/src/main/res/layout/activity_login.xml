@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_clo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/login_root_vlo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/boardwalk_beach"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_widget_tlo"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#66018786">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/existing_account_tw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="@string/login_existing_account_tab" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/new_account_tw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_new_account_tab" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <FrameLayout
+            android:id="@+id/login_tab_flo"
+            android:layout_width="500dp"
+            android:layout_height="400dp"
+            android:background="#9A03DAC5" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/existing_account_clo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:background="#000000"
+    tools:context=".ExistingAccountFragment">
+
+    <LinearLayout
+        android:id="@+id/existing_account_master_vlo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9A018786"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/existing_account_hlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/existing_account_text_vlo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/existing_account_email_or_username_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cd_existing_account_email_or_username_textview"
+                    android:padding="10dp"
+                    android:text="@string/existing_account_email_or_username_colontext"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/existing_account_password_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cd_existing_account_password_textview"
+                    android:padding="10dp"
+                    android:text="@string/existing_account_password_colontext"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/existing_account_input_vlo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/existing_account_email_or_username_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/existing_account_email_or_username_hinttext"
+                    android:ems="10"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/existing_account_email_or_username_hinttext"
+                    android:inputType="textPersonName|textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#4DE0F7FA"
+                    android:textSize="24sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <EditText
+                    android:id="@+id/existing_account_password_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/existing_account_password_hinttext"
+                    android:ems="10"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/existing_account_password_hinttext"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#4DE0F7FA"
+                    android:textSize="24sp"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/existing_account_confirmation_vlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/existing_account_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/cd_existing_account_status_textview"
+                android:drawablePadding="5dp"
+                android:gravity="center_horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/existing_account_status_text"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:drawableEndCompat="@drawable/tiny_checkmark_placeholder" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/existing_account_confirmation_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/teal_700"
+                android:contentDescription="@string/cd_existing_account_confirmation_button"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/existing_account_confirmation_button_text"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                tools:ignore="RedundantDescriptionCheck,TextContrastCheck,TextContrastCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/existing_account_assistance_hlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/existing_account_forgot_email_or_username_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cd_existing_account_forgot_email_or_username_textview"
+                android:padding="5dp"
+                android:text="@string/existing_account_forgot_email_or_username_questiontext"
+                android:textColor="@color/teal_200"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/existing_account_forgot_password_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cd_existing_account_forgot_password_textview"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/existing_account_forgot_password_questiontext"
+                android:textColor="@color/teal_200"
+                android:textSize="14sp"
+                tools:ignore="TextContrastCheck" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

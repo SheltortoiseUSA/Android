@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+
+def projectName = "BeachRatingApp"
+def buildType = "Test Candidate"
+def versionNumber = "01.00.000"
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.shusa.beachratingapp"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName (versionNumber + "_" + buildType)
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = projectName + "-v${variant.versionName}.apk"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+}

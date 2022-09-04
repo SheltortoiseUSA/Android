@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/beach_clo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/teal_200"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/beach_root_vlo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/beach_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:gravity="center"
+            android:text="@string/beach_title_text"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            tools:ignore="TextContrastCheck" />
+
+        <LinearLayout
+            android:id="@+id/beach_public_rating_section_hlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/beach_rating_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beach_rating_colontext"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/beach_public_rating_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beach_rating_text"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/beach_image_flo"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="#000000"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/beach_picture_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/cd_beach_placeholder_imageview"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/launch_background"
+                tools:ignore="ImageContrastCheck" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/beach_personal_rating_section_hlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/beach_personal_rating_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cd_beach_personal_rating_ratingbar" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/beach_personal_rating_submission_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/teal_200"
+                android:text="@string/beach_rating_submission_button_text"
+                tools:ignore="TextContrastCheck" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/beach_chat_flo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/beach_chat_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/teal_700"
+                android:padding="5dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
