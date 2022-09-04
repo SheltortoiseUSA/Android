@@ -1,8 +1,0 @@
-<resources>
-
-    <string name="app_name">Happy to Sad</string>
-    <string name="happy_emoji">Yay!</string>
-    <string name="sad_emoji">Waaaaa!</string>
-    <string name="bipolar_emoji_btn">Bipolar Mode</string>
-
-</resources>

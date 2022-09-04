@@ -1,9 +1,0 @@
-<resources>
-
-    <string name="app_name">Ascii Camera</string>
-
-    <string name="camera">Launch Camera</string>
-    <string name="convert_ascii">Convert to Ascii</string>
-    <string name="thumbnail">Photo Thumbnail</string>
-
-</resources>

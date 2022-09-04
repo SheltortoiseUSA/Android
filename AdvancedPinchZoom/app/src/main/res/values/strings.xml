@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">AdvancedPinchZoom</string>
-
-    <string name="image_content_description">Image Content Description</string>
-    <string name="image_fetcher_content_description">Image Fetcher Content Description</string>
-
-    <string name="image_fetch_button">Fetch Image</string>
-
-</resources>
