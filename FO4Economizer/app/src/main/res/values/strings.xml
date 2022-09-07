@@ -1,0 +1,18 @@
+<resources>
+    <!-- activity_main.xml ======================================================================-->
+    <string name="app_name">FO4Economizer</string>
+
+    <!-- detailed_list_item.xml =================================================================-->
+    <string name="detailed_list_item_name_colontext">Name: </string>
+    <string name="detailed_list_item_difficulty_colontext">Difficulty: </string>
+    <string name="detailed_list_item_base_value_colontext">Base Value: </string>
+    <string name="detailed_list_item_sale_value_colontext">Sale Value: </string>
+    <string name="detailed_list_item_ruined_value_colontext">Ruined Value: </string>
+    <string name="detailed_list_item_prestine_value_colontext">Prestine Value: </string>
+    <string name="detailed_list_item_base_vpw_colontext">Base VPW: </string>
+    <string name="detailed_list_item_sale_vpw_colontext">Sale VPW: </string>
+    <string name="detailed_list_item_ruined_vpw_colontext">Ruined VPW: </string>
+    <string name="detailed_list_item_prestine_vpw_colontext">Prestine VPW: </string>
+    <string name="detailed_list_item_weight_colontext">Weight: </string>
+    <string name="detailed_list_item_craft_list_colontext">Craft List: </string>
+</resources>
