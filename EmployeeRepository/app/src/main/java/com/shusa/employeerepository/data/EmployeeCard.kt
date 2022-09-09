@@ -1,6 +1,7 @@
 package com.shusa.employeerepository.data
 
 import android.util.Log
+import android.widget.ImageView
 import com.shusa.employeerepository.R
 
 // Explicit Constructor
@@ -10,8 +11,8 @@ class EmployeeCard(
     _phoneNumber: String?,
     _emailAddress: String?,
     _biography: String?,
-    _phoneUrlSmall: String?,
-    _phoneUrlLarge: String?,
+    _photoSmall: ImageView?,
+    _photoLarge: ImageView?,
     _team: String?,
     _employeeType: String?
 ) {
@@ -21,8 +22,8 @@ class EmployeeCard(
     private var phoneNumber: String? = _phoneNumber
     private var emailAddress: String? = _emailAddress
     private var biography: String? = _biography
-    private var phoneUrlSmall: String? = _phoneUrlSmall
-    private var phoneUrlLarge: String? = _phoneUrlLarge
+    private var photoSmall: ImageView? = _photoSmall
+    private var photoLarge: ImageView? = _photoLarge
     private var team: String? = _team
     private var employeeType: String? = _employeeType
 
@@ -37,8 +38,8 @@ class EmployeeCard(
     fun getPhoneNumber(): String = phoneNumber as String
     fun getEmailAddress(): String = emailAddress as String
     fun getBiography(): String = biography as String
-    fun getPhoneUrlSmall(): String = phoneUrlSmall as String
-    fun getPhoneUrlLarge(): String = phoneUrlLarge as String
+    fun getPhotoSmall(): ImageView = photoSmall as ImageView
+    fun getPhotoLarge(): ImageView = photoLarge as ImageView
     fun getTeam(): String = team as String
     fun getEmployeeType(): String = employeeType as String
 }
