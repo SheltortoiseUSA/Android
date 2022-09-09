@@ -4,15 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.google.gson.Gson
-import org.json.JSONException
-import org.json.JSONObject
+import com.shusa.employeerepository.R
+import com.shusa.employeerepository.json.JsonUtility
 import java.io.FileWriter
 import java.io.PrintWriter
 import java.net.HttpURLConnection
 import java.net.URL
-import java.nio.charset.Charset
-import java.nio.file.Files
-import java.nio.file.Paths
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //httpsGetEmployees()
+        httpsGetEmployees()
     }
 
     /**
@@ -64,18 +61,6 @@ class MainActivity : AppCompatActivity() {
      *  - https://stackoverflow.com/questions/45193941/how-to-read-and-write-txt-files-in-android-in-kotlin
      */
     fun storeEmployees(employees: String) {
-        val path = this.getFilesDir()
-
-        // Converts JSON String to JSON file and stores it in device memory.
-        try {
-            //Files.createDirectories(Paths.get(path))
-            PrintWriter(FileWriter(path)).use {
-                val gson = Gson()
-                val jsonString = gson.toJson(employees)
-                it.write(jsonString)
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+        JsonUtility.unpackData(employees)
     }
 }
