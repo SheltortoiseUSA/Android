@@ -1,7 +1,7 @@
 <resources>
     <!-- Global Strings =========================================================================-->
     <string name="app_name">Game Item Economizer App</string>
-    <string name="file_name">items.json</string>
+    <string name="file_name">employees.json</string>
 
     <!-- Logging Strings ========================================================================-->
     <string name="log_back_button_not_allowed">Back button pressed, but is not allowed.</string>
@@ -13,4 +13,8 @@
     <string name="log_initialized">Initialized</string>
     <string name="log_value">Value</string>
     <string name="log_value_to_update">Value to Update</string>
+
+    <!-- activity_main.xml ======================================================================-->
+    <string name="main_title_text">Employees</string>
+    <string name="main_get_employees_text">Get Employees</string>
 </resources>
