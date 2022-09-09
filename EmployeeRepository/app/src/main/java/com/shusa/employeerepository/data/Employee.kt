@@ -4,8 +4,7 @@ import android.util.Log
 import com.shusa.employeerepository.R
 
 // Explicit Constructor
-class Employee
-    (
+class Employee(
     _uuid: String?,
     _fullName: String?,
     _phoneNumber: String?,
