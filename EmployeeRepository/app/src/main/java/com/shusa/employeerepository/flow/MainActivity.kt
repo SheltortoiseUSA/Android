@@ -3,23 +3,41 @@ package com.shusa.employeerepository.flow
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.google.gson.Gson
+import android.widget.Button
+import androidx.recyclerview.widget.RecyclerView
 import com.shusa.employeerepository.R
+import com.shusa.employeerepository.data.EmployeeLibrary
 import com.shusa.employeerepository.json.JsonUtility
-import java.io.FileWriter
-import java.io.PrintWriter
 import java.net.HttpURLConnection
 import java.net.URL
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
-    val CLASS_TAG = this::class.java.simpleName
+    // Tag for Logging
+    private val classTag: String? = this::class.java.simpleName
+
+    // Views for Global Access
+    private lateinit var employeesRV: RecyclerView
+    private lateinit var getEmployeesBtn: Button
+
+    // Boolean to prevent multiple clicks of the button.
+    private var isProcessing: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        httpsGetEmployees()
+        // Links Local View Objects to XML Views
+        employeesRV = findViewById(R.id.main_employees_rv)
+        getEmployeesBtn = findViewById(R.id.main_get_employees_btn)
+
+        // Tethers Pull Request to Button Press
+        getEmployeesBtn.setOnClickListener {
+            if (!isProcessing) {
+                isProcessing = true;
+                httpsGetEmployees()
+            }
+        }
     }
 
     /**
@@ -30,6 +48,9 @@ class MainActivity : AppCompatActivity() {
      */
     fun httpsGetEmployees() {
         thread {
+            // Resets the singleton object in preparation for the new json input.
+            EmployeeLibrary.removeAllEmployees()
+
             val stringBuilder = StringBuilder()
             val url = URL("https://s3.amazonaws.com/sq-mobile-interview/employees.json")
 
@@ -37,12 +58,12 @@ class MainActivity : AppCompatActivity() {
                 requestMethod = "GET"
 
                 val request = ("\nSent 'GET' request to URL : $url; Response Code : $responseCode")
-                Log.e(CLASS_TAG, request)
+                Log.e(classTag, request)
 
                 inputStream.bufferedReader().use {
                     it.lines().forEach { line ->
                         stringBuilder.append(line)
-                        Log.e(CLASS_TAG, line);
+                        Log.e(classTag, line);
                     }
                 }
             }
@@ -62,5 +83,6 @@ class MainActivity : AppCompatActivity() {
      */
     fun storeEmployees(employees: String) {
         JsonUtility.unpackData(employees)
+        isProcessing = false
     }
 }
