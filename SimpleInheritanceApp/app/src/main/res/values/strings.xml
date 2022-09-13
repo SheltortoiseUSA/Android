@@ -1,3 +1,12 @@
 <resources>
+    <!-- Global String References ===============================================================-->
     <string name="app_name">Simple Inheritance App</string>
+
+    <!-- activity_main.xml ======================================================================-->
+    <string name="main_title_text">Inheritors</string>
+    <string name="main_name_colontext">Name: </string>
+    <string name="main_name_hinttext">John Smith</string>
+    <string name="main_shares_colontext">Shares: </string>
+    <string name="main_shares_hinttext">100</string>
+    <string name="main_add_inheritor_text">Add Inheritor</string>
 </resources>
