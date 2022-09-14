@@ -2,7 +2,7 @@
 <resources>
     <!-- Default Colors -->
     <color name="black">#FF000000</color>
-    <color name="white">#59646D</color>
+    <color name="white">#FFFFFF</color>
 
     <!-- SUSA Colors -->
     <color name="susa_light_grey">#BCBEC7</color>

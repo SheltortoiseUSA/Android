@@ -8,7 +8,7 @@ class InheritorsViMFactory(private val inheritorRepo: InheritorRepo) :
     ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return InheritorsViM(inheritorRepo) as T
     }
 }

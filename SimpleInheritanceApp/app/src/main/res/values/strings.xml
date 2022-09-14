@@ -2,11 +2,18 @@
     <!-- Global String References ===============================================================-->
     <string name="app_name">Simple Inheritance App</string>
 
+    <!-- Global Toast References ================================================================-->
+    <string name="toast_empty_input_fields">Input Fields Are Empty</string>
+    <string name="toast_invalid_shares_input">Shares Must Be A Number</string>
+    <string name="toast_invalid_net_worth_input">Net Worth Must Be A Number</string>
+
     <!-- activity_main.xml ======================================================================-->
     <string name="main_title_text">Inheritors</string>
     <string name="main_name_colontext">Name: </string>
     <string name="main_name_hinttext">John Smith</string>
     <string name="main_shares_colontext">Shares: </string>
     <string name="main_shares_hinttext">100</string>
+    <string name="main_net_worth_colontext">Net Worth: </string>
+    <string name="main_net_worth_hinttext">$100,000.00</string>
     <string name="main_add_inheritor_text">Add Inheritor</string>
 </resources>
