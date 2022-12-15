@@ -16,6 +16,9 @@ class InheritanceActivity : AppCompatActivity() {
     private lateinit var nameET: EditText
     private lateinit var sharesET: EditText
     private lateinit var addInheritorBtn: Button
+    private lateinit var netWorthET: EditText
+
+    private var totalShares: Int = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,7 @@ class InheritanceActivity : AppCompatActivity() {
         nameET = findViewById(R.id.main_name_et)
         sharesET = findViewById(R.id.main_shares_et)
         addInheritorBtn = findViewById(R.id.main_add_inheritor_btn)
+        netWorthET = findViewById(R.id.main_new_worth_et)
 
         initializeUi()
     }
@@ -35,7 +39,25 @@ class InheritanceActivity : AppCompatActivity() {
 
         viewModel.getInheritors().observe(this, { inheritors ->
             inheritors.forEach { inheritor ->
-                
+                var netWorth = 0.0
+
+                try {
+                    netWorth = Integer.parseInt(netWorthET.text.toString()).toDouble()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(this, getString(R.string.toast_invalid_shares_input), Toast.LENGTH_SHORT).show()
+                }
+
+                // Get Value per Share
+                val vps = (inheritor.getShares() / netWorth)
+                inheritor.setInheritance(vps)
+
+                // Set Values for Card
+                val name = inheritor.getName()
+                val shares = inheritor.getShares()
+                val inheritance = inheritor.getInheritance()
+
+
             }
         })
 
@@ -50,6 +72,7 @@ class InheritanceActivity : AppCompatActivity() {
                     e.printStackTrace()
                     Toast.makeText(this, getString(R.string.toast_invalid_shares_input), Toast.LENGTH_SHORT).show()
                 }
+                totalShares += shares
 
                 val inheritor = Inheritor(name, shares)
                 viewModel.addInheritor(inheritor)
