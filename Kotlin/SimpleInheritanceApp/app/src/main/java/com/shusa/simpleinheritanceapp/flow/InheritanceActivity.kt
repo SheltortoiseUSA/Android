@@ -18,11 +18,11 @@ class InheritanceActivity : AppCompatActivity() {
     private lateinit var addInheritorBtn: Button
     private lateinit var netWorthET: EditText
 
-    private var totalShares: Int = 0;
+    private var totalShares: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_inheritance)
 
         nameET = findViewById(R.id.main_name_et)
         sharesET = findViewById(R.id.main_shares_et)
