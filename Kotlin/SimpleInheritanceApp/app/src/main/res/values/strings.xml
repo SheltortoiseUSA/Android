@@ -7,6 +7,9 @@
     <string name="toast_invalid_shares_input">Shares Must Be A Number</string>
     <string name="toast_invalid_net_worth_input">Net Worth Must Be A Number</string>
 
+    <!-- Global Logging References ================================================================-->
+    <string name="log_initialized">Initialized</string>
+
     <!-- activity_main.xml ======================================================================-->
     <string name="main_title_text">Inheritors</string>
     <string name="main_name_colontext">Name: </string>
@@ -16,4 +19,9 @@
     <string name="main_net_worth_colontext">Net Worth: </string>
     <string name="main_net_worth_hinttext">$100,000.00</string>
     <string name="main_add_inheritor_text">Add Inheritor</string>
+
+    <!-- card_inheritor_item.xml ================================================================-->
+    <string name="card_inheritor_header_text">John Smith </string>
+    <string name="card_inheritor_divider_text">will receive $</string>
+    <string name="card_inheritor_footer_text">100.00</string>
 </resources>
