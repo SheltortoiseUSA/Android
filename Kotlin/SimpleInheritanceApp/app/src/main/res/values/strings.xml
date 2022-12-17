@@ -21,7 +21,10 @@
     <string name="main_add_inheritor_text">Add Inheritor</string>
 
     <!-- card_inheritor_item.xml ================================================================-->
-    <string name="card_inheritor_header_text">John Smith </string>
-    <string name="card_inheritor_divider_text">will receive $</string>
-    <string name="card_inheritor_footer_text">100.00</string>
+    <string name="card_inheritor_name_text">John Smith </string>
+    <string name="card_inheritor_will_receive_text">will receive $</string>
+    <string name="card_inheritor_inheritance_text">100.00 </string>
+    <string name="card_inheritor_from_text">from </string>
+    <string name="card_inheritor_amount_of_shares_text">10 </string>
+    <string name="card_inheritor_shares_text">shares.</string>
 </resources>

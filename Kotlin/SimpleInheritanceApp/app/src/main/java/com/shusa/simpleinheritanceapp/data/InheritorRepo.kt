@@ -6,9 +6,9 @@ class InheritorRepo private constructor(private val inheritorDao: FakeInheritorD
         @Volatile
         private var instance: InheritorRepo? = null
 
-        fun getInstance(inheritorDao: FakeInheritorDao) =
+        fun getInstance(inheritorListDao: FakeInheritorDao) =
             instance ?: synchronized(this) {
-                instance ?: InheritorRepo(inheritorDao).also { instance = it }
+                instance ?: InheritorRepo(inheritorListDao).also { instance = it }
             }
     }
 

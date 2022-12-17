@@ -2,12 +2,12 @@ package com.shusa.simpleinheritanceapp.utilities
 
 import com.shusa.simpleinheritanceapp.data.FakeDatabase
 import com.shusa.simpleinheritanceapp.data.InheritorRepo
-import com.shusa.simpleinheritanceapp.ui.InheritorsViMFactory
+import com.shusa.simpleinheritanceapp.ui.InheritorViMFactory
 
 object InjectorUtility {
 
-    fun provideInheritorsViMFactory() : InheritorsViMFactory {
+    fun provideInheritorsViMFactory() : InheritorViMFactory {
         val inheritorRepo = InheritorRepo.getInstance(FakeDatabase.getInstance().inheritorDao)
-        return InheritorsViMFactory(inheritorRepo)
+        return InheritorViMFactory(inheritorRepo)
     }
 }

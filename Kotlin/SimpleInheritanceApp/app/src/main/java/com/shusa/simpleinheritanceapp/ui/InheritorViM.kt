@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.shusa.simpleinheritanceapp.data.Inheritor
 import com.shusa.simpleinheritanceapp.data.InheritorRepo
 
-class InheritorsViM(private val inheritorRepo: InheritorRepo) : ViewModel() {
+class InheritorViM(private val inheritorRepo: InheritorRepo) : ViewModel() {
 
     fun getInheritors() = inheritorRepo.getInheritors()
 
