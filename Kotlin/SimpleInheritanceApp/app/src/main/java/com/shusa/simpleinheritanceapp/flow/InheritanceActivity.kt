@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.shusa.simpleinheritanceapp.R
 import com.shusa.simpleinheritanceapp.data.CardsViewModel
@@ -21,7 +22,6 @@ class InheritanceActivity : AppCompatActivity() {
     private lateinit var sharesET: EditText
     private lateinit var addInheritorBtn: Button
     private lateinit var netWorthET: EditText
-    private lateinit var inheritorsRV: RecyclerView
 
     private var totalShares: Int = 0
 
@@ -35,7 +35,6 @@ class InheritanceActivity : AppCompatActivity() {
         sharesET = findViewById(R.id.main_shares_et)
         addInheritorBtn = findViewById(R.id.main_add_inheritor_btn)
         netWorthET = findViewById(R.id.main_new_worth_et)
-        inheritorsRV = findViewById(R.id.main_inheritors_rv)
 
         initializeUi()
     }
@@ -66,11 +65,11 @@ class InheritanceActivity : AppCompatActivity() {
                 val name = inheritor.getName()
                 val shares = inheritor.getShares()
                 val inheritance = inheritor.getInheritance()
-
-                inheritorsViM.addInheritor(inheritor)
                 cards.add(CardsViewModel(name, shares, inheritance))
             }
-            inheritorsRV.adapter = CardAdapter(cards)
+            val inheritorsRV: RecyclerView? = findViewById(R.id.main_inheritors_rv)
+            inheritorsRV?.layoutManager = LinearLayoutManager(this)
+            inheritorsRV?.adapter = CardAdapter(cards)
         })
 
         addInheritorBtn.setOnClickListener {
